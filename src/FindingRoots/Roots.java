@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Roots {
 
     public static void findingRoots(int a, int b, int c){
-        double delta = (double) Math.pow(b, 2) - (4.0 * a * c);
+        double delta = Math.pow(b, 2) - (4.0 * a * c);
         if (delta < 0) {
             System.out.println("Reel kök bulunamadı.");
             return;
         }
         double x1, x2;
-        x1 = (double) (-b + Math.sqrt(delta)) / (2*a);
-        x2 = (double) (-b - Math.sqrt(delta)) / (2*a);
+        x1 = (-b + Math.sqrt(delta)) / (2*a);
+        x2 = (-b - Math.sqrt(delta)) / (2*a);
         System.out.println("Girdiğiniz denklem: " + a + "x^2 + " + b + "x +" + c);
         System.out.println("İlk kök: " + x1);
         System.out.println("İkinci kök: " + x2);
