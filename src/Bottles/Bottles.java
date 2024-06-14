@@ -16,6 +16,6 @@ public class Bottles {
     }
 
     public static void main(String[] args) {
-        printSong(true, 3);
+        printSong("Bottles", 3);
     }
 }
