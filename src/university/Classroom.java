@@ -7,6 +7,17 @@ public class Classroom {
     Department department;
     Professor professor;
 
+    public Classroom(String classroomName) {
+        this(classroomName, null, null, null, null);
+    }
+    public Classroom(String classroomName, Course course, Student[] students, Department department, Professor professor) {
+        this.classroomName = classroomName;
+        this.course = course;
+        this.students = students;
+        this.department = department;
+        this.professor = professor;
+    }
+
     public void setClassroomName(String classroomName) {
         this.classroomName = classroomName;
     }

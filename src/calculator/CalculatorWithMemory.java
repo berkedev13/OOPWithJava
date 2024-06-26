@@ -13,8 +13,6 @@ public class CalculatorWithMemory {
     double result;
     char operation;
 
-
-
     public int getFirstArgument() {
         return firstArgument;
     }
@@ -73,15 +71,15 @@ public class CalculatorWithMemory {
         calculator.setFirstArgument(1);
         calculator.setSecondArgument(2);
         calculator.setOperation('+');
-        double first = calculator.getResult();
+        calculator.getResult();
         calculator.setFirstArgument(3);
         calculator.setSecondArgument(-2);
         calculator.setOperation('-');
-        double second = calculator.getResult();
+        calculator.getResult();
         calculator.setFirstArgument(-2);
         calculator.setSecondArgument(-93);
         calculator.setOperation('*');
-        double third = calculator.getResult();
+        calculator.getResult();
 
         for(int firstArgs : calculator.firstArguments) {
             System.out.println(firstArgs);
@@ -94,6 +92,16 @@ public class CalculatorWithMemory {
         }
         for(double results : calculator.results) {
             System.out.println(results);
+        }
+
+        System.out.println("*******************");
+
+        for (int i = 0; i < calculator.getMemoryNumber(); i++) {
+            System.out.println("First: " + calculator.firstArguments[i]);
+            System.out.println("Second: " + calculator.secondArguments[i]);
+            System.out.println("Operator: " + calculator.operations[i]);
+            System.out.println("Result: " + calculator.results[i]);
+            System.out.println();
         }
 
     }

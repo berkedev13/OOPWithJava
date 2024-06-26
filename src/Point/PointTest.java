@@ -2,12 +2,8 @@ package Point;
 
 public class PointTest {
     public static void main(String[] args) {
-        Point point1 = new Point();
-        Point point2 = new Point();
-        point1.setX(3);
-        point1.setY(4);
-        point2.setX(-8);
-        point2.setY(-6);
+        Point point1 = new Point(3,4);
+        Point point2 = new Point(-8,-6);
         System.out.println(point1.distanceToOrigin());
         System.out.println(point2.distanceToOrigin());
         System.out.println(point1.distancoToAnotherPoint(point2));
@@ -18,5 +14,7 @@ public class PointTest {
 
         point1.move(3,-4);
         System.out.println(point1.distanceToOrigin());
+
+
     }
 }

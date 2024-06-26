@@ -52,12 +52,8 @@ public class Test {
         System.out.println("Name of student student1's first course's professor's department is " + student1.coursesTaken[0].teacher.department.name);
             System.out.println("********************");
 
-        Classroom classroom1 = new Classroom();
-        classroom1.setClassroomName("E-101");
-        classroom1.setCourse(course1);
-        classroom1.setDepartment(course1.department);
-        classroom1.setProfessor(course1.teacher);
-        classroom1.setStudents(course1.students);
+        Classroom classroom1 = new Classroom("E-101", course1, course1.students, course1.department, course1.teacher);
+
 
             System.out.println("Classroom name: " + classroom1.getClassroomName());
             System.out.println("Classroom course: " + classroom1.getCourse().name);
